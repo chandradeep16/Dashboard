@@ -1,0 +1,104 @@
+.card {
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.product-details {
+  font-family: Arial, sans-serif;
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-contentLeft {
+  flex: 1;
+}
+
+.top-contentRight {
+  display: flex;
+  align-items: center;
+}
+
+.topText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-icon {
+  color: #777;
+  margin-right: 10px;
+}
+
+.search-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.column {
+  margin-top: 10px;
+  color: #333;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.productDetailsContent {
+  margin-top: 20px;
+}
+
+.productDetailsRowHeaders {
+  display: flex;
+  align-items: center;
+}
+
+.productDetailsRow {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.productDetailsRowunderline {
+  border-bottom: 0.5px solid grey;
+}
+
+.productName {
+  flex: 3;
+  font-weight: bold;
+  color: #333;
+}
+
+.column {
+  flex: 0.5;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+}
+
+.head {
+  color: rgb(122, 115, 115);
+}
+
+
+

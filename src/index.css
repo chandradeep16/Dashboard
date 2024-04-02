@@ -1,0 +1,280 @@
+/* Base font size */
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dee2e6;
+  font-family: "Montserrat", sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 1.25rem; 
+}
+
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 1.625rem; 
+}
+
+.icon,
+.icon_header {
+  margin-right: 0.3125rem;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.5rem 1.875rem; 
+  border: none;
+  border-radius: 1.25rem; 
+  background-color: white;
+  width: 12.5rem; 
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.625rem; 
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.search-icon-2 {
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 16.25rem 1fr 1fr 1fr; 
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: "sidebar header header header" "sidebar main main main";
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  height: 3.75rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.125rem; 
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header */
+
+/* Sidebar */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #2d4f8e;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.875rem; 
+  padding: 1.25rem; 
+  color: #ffff;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  font-size: 1.25rem; 
+  font-weight: 700;
+  text-align: center;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 1.25rem; 
+  font-size: 1.125rem; 
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.972);
+  cursor: pointer;
+  
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
+
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 1.25rem 3.125rem; 
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 1.875rem; 
+  margin-top: 0.625rem; 
+  cursor: pointer;
+}
+
+/* styles.css */
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.25rem; 
+  margin: 0.9375rem 0; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0.3125rem; 
+  background-color: #fff;
+}
+
+.card-body {
+  margin-top: 5px;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+}
+
+.card-left {
+  background-color: rgb(74, 141, 74);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.9375rem; 
+  padding: 1.875rem; 
+}
+
+.card-left.card-left-earnings {
+  background-color: rgb(74, 141, 74);
+}
+
+.card-left.card-left-orders {
+  background-color: #ffcc00;
+}
+
+.card-left.card-left-balance {
+  background-color: #3399ff;
+}
+
+.card-left.card-left-total-sales {
+  background-color: #ff6666;
+}
+
+.card_icon {
+  font-size: 2.25rem;
+}
+
+.card-right {
+  /* flex-grow: 1; */
+}
+
+.cardTitle {
+  font-size: 0.75rem; 
+  color: grey;
+  margin-bottom: 0.1875rem;
+}
+
+.cardPrice {
+  font-size: 1.125rem; 
+  font-weight: 700;
+  color: black;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.875rem; 
+  color: #666;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem; 
+  margin-top: 1.5rem; 
+  height: 18.75rem;
+}
+
+
+@media screen and (max-width: 62rem) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: "header" "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+
+/* Small <= 768px */
+
+@media screen and (max-width: 48rem) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 0.625rem; 
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 1.875rem; 
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 36rem) {
+  .hedaer-left {
+    display: none;
+  }
+}
